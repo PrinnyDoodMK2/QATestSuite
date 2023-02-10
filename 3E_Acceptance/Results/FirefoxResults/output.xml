@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20230209 19:04:56.181" rpa="false" schemaversion="3">
+<suite id="s1" name="Alarms" source="/Users/runtime/PycharmProjects/3E_Acceptance/Tests/TestSuite/Alarms.robot">
+<test id="s1-t1" name="Access Alarms Manager" line="17">
+<kw name="Open Browser To ACCEPTANCE Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ACCEPTANCE LOGIN URL}</arg>
+<arg>${BROWSER2}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230209 19:04:56.993" level="INFO">Opening browser 'headlessfirefox' to base url 'https://admin.3esynaptiq.com/sq2020/sign-in'.</msg>
+<msg timestamp="20230209 19:04:56.996" level="INFO">Firefox driver log is always forced to to: /Users/runtime/PycharmProjects/3E_Acceptance/Results/FirefoxResults/geckodriver-1.log</msg>
+<status status="PASS" starttime="20230209 19:04:56.993" endtime="20230209 19:05:05.860"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230209 19:05:05.861" endtime="20230209 19:05:05.869"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230209 19:05:05.869" endtime="20230209 19:05:05.870"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230209 19:05:05.870" endtime="20230209 19:05:06.376"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:05:08.378" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:05:06.376" endtime="20230209 19:05:08.379"/>
+</kw>
+<status status="PASS" starttime="20230209 19:04:56.993" endtime="20230209 19:05:08.379"/>
+</kw>
+<kw name="Login Acceptance" library="Keywords">
+<doc>This keyword will perfom the steps for a valid login in ACCEPTANCE</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${ACCEPTANCE USERNAME 1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:08.381" level="INFO">Typing text 'runtimerev' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230209 19:05:08.380" endtime="20230209 19:05:09.958"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${ACCEPTANCE PASSWORD 1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:09.959" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230209 19:05:10.971" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230209 19:05:11.498" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230209 19:05:09.958" endtime="20230209 19:05:11.499"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:11.499" level="INFO">Clicking element 'class=button'.</msg>
+<status status="PASS" starttime="20230209 19:05:11.499" endtime="20230209 19:05:12.734"/>
+</kw>
+<status status="PASS" starttime="20230209 19:05:08.379" endtime="20230209 19:05:12.734"/>
+</kw>
+<kw name="Access Alarms Manager" library="Keywords">
+<doc>This keyword will include the steps to access the alarms manager</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230209 19:05:12.734" endtime="20230209 19:05:13.757"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:13.757" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]/div'.</msg>
+<status status="PASS" starttime="20230209 19:05:13.757" endtime="20230209 19:05:15.269"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:05:17.270" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:05:15.270" endtime="20230209 19:05:17.270"/>
+</kw>
+<status status="PASS" starttime="20230209 19:05:12.734" endtime="20230209 19:05:17.270"/>
+</kw>
+<kw name="Finalize Test Case" library="Keywords" type="TEARDOWN">
+<doc>This will includ a wait time of 2 seconds and the [Teardown] close browser keyword</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:05:21.272" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230209 19:05:17.271" endtime="20230209 19:05:21.272"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230209 19:05:21.273" endtime="20230209 19:05:22.428"/>
+</kw>
+<status status="PASS" starttime="20230209 19:05:17.271" endtime="20230209 19:05:22.428"/>
+</kw>
+<doc>This test will simulate a user login and access to the Alarms Manager</doc>
+<tag>acceptance</tag>
+<tag>alarms</tag>
+<tag>demonstration</tag>
+<tag>manager</tag>
+<tag>regression</tag>
+<tag>sprint60</tag>
+<status status="PASS" starttime="20230209 19:04:56.992" endtime="20230209 19:05:22.428"/>
+</test>
+<test id="s1-t2" name="&quot;Use Default&quot; button check" line="25">
+<kw name="Open Browser To ACCEPTANCE Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ACCEPTANCE LOGIN URL}</arg>
+<arg>${BROWSER2}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230209 19:05:22.431" level="INFO">Opening browser 'headlessfirefox' to base url 'https://admin.3esynaptiq.com/sq2020/sign-in'.</msg>
+<msg timestamp="20230209 19:05:22.431" level="INFO">Firefox driver log is always forced to to: /Users/runtime/PycharmProjects/3E_Acceptance/Results/FirefoxResults/geckodriver-2.log</msg>
+<status status="PASS" starttime="20230209 19:05:22.430" endtime="20230209 19:05:28.114"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230209 19:05:28.114" endtime="20230209 19:05:28.620"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230209 19:05:28.620" endtime="20230209 19:05:28.621"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230209 19:05:28.621" endtime="20230209 19:05:29.130"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:05:31.131" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:05:29.130" endtime="20230209 19:05:31.131"/>
+</kw>
+<status status="PASS" starttime="20230209 19:05:22.430" endtime="20230209 19:05:31.132"/>
+</kw>
+<kw name="Login Acceptance" library="Keywords">
+<doc>This keyword will perfom the steps for a valid login in ACCEPTANCE</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${ACCEPTANCE USERNAME 1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:31.133" level="INFO">Typing text 'runtimerev' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230209 19:05:31.133" endtime="20230209 19:05:32.688"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${ACCEPTANCE PASSWORD 1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:32.689" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230209 19:05:33.707" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230209 19:05:34.236" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230209 19:05:32.688" endtime="20230209 19:05:34.236"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:34.237" level="INFO">Clicking element 'class=button'.</msg>
+<status status="PASS" starttime="20230209 19:05:34.237" endtime="20230209 19:05:35.494"/>
+</kw>
+<status status="PASS" starttime="20230209 19:05:31.132" endtime="20230209 19:05:35.495"/>
+</kw>
+<kw name="Access Alarms Manager" library="Keywords">
+<doc>This keyword will include the steps to access the alarms manager</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230209 19:05:35.495" endtime="20230209 19:05:36.615"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:36.615" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]/div'.</msg>
+<status status="PASS" starttime="20230209 19:05:36.615" endtime="20230209 19:05:38.159"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:05:40.161" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:05:38.159" endtime="20230209 19:05:40.161"/>
+</kw>
+<status status="PASS" starttime="20230209 19:05:35.495" endtime="20230209 19:05:40.161"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:05:42.165" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:05:40.162" endtime="20230209 19:05:42.165"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:05:42.166" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]'.</msg>
+<status status="PASS" starttime="20230209 19:05:42.166" endtime="20230209 19:05:43.482"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="mui-component-select-level"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230209 19:05:43.483" endtime="20230209 19:05:44.502"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//*[@id="main-app"]/div[2]/div[2]/div[1]/div[1]/div/div[1]/input</arg>
+<arg>inverter deviation</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230209 19:05:44.504" level="INFO">Sending key(s) ('inverter deviation', 'ENTER') to //*[@id="main-app"]/div[2]/div[2]/div[1]/div[1]/div/div[1]/input element.</msg>
+<msg timestamp="20230209 19:05:45.793" level="INFO">Sending keys inverter deviation</msg>
+<msg timestamp="20230209 19:05:46.393" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20230209 19:05:46.394" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230209 19:05:44.503" endtime="20230209 19:05:46.906"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:05:56.908" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230209 19:05:46.907" endtime="20230209 19:05:56.908"/>
+</kw>
+<kw name="Finalize Test Case" library="Keywords" type="TEARDOWN">
+<doc>This will includ a wait time of 2 seconds and the [Teardown] close browser keyword</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:06:00.911" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230209 19:05:56.909" endtime="20230209 19:06:00.911"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230209 19:06:00.912" endtime="20230209 19:06:03.604"/>
+</kw>
+<status status="PASS" starttime="20230209 19:05:56.908" endtime="20230209 19:06:03.604"/>
+</kw>
+<doc>The button "Use Default" should not be interactable and visible to the user</doc>
+<tag>3715</tag>
+<tag>acceptance</tag>
+<tag>alarms</tag>
+<tag>manager</tag>
+<tag>regression</tag>
+<status status="PASS" starttime="20230209 19:05:22.429" endtime="20230209 19:06:03.605"/>
+</test>
+<test id="s1-t3" name="Add &amp; enable a new exception" line="43">
+<kw name="Open Browser To ACCEPTANCE Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ACCEPTANCE LOGIN URL}</arg>
+<arg>${BROWSER2}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230209 19:06:03.609" level="INFO">Opening browser 'headlessfirefox' to base url 'https://admin.3esynaptiq.com/sq2020/sign-in'.</msg>
+<msg timestamp="20230209 19:06:03.609" level="INFO">Firefox driver log is always forced to to: /Users/runtime/PycharmProjects/3E_Acceptance/Results/FirefoxResults/geckodriver-3.log</msg>
+<status status="PASS" starttime="20230209 19:06:03.607" endtime="20230209 19:06:16.566"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230209 19:06:16.566" endtime="20230209 19:06:17.071"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230209 19:06:17.071" endtime="20230209 19:06:17.072"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230209 19:06:17.072" endtime="20230209 19:06:17.579"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:06:19.581" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:06:17.580" endtime="20230209 19:06:19.581"/>
+</kw>
+<status status="PASS" starttime="20230209 19:06:03.607" endtime="20230209 19:06:19.582"/>
+</kw>
+<kw name="Login Acceptance" library="Keywords">
+<doc>This keyword will perfom the steps for a valid login in ACCEPTANCE</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${ACCEPTANCE USERNAME 1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:19.583" level="INFO">Typing text 'runtimerev' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230209 19:06:19.583" endtime="20230209 19:06:21.160"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${ACCEPTANCE PASSWORD 1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:21.161" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230209 19:06:22.180" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230209 19:06:22.707" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230209 19:06:21.161" endtime="20230209 19:06:22.708"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:22.710" level="INFO">Clicking element 'class=button'.</msg>
+<status status="PASS" starttime="20230209 19:06:22.709" endtime="20230209 19:06:23.949"/>
+</kw>
+<status status="PASS" starttime="20230209 19:06:19.582" endtime="20230209 19:06:23.949"/>
+</kw>
+<kw name="Access Alarms Manager" library="Keywords">
+<doc>This keyword will include the steps to access the alarms manager</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230209 19:06:23.950" endtime="20230209 19:06:26.271"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:26.272" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]/div'.</msg>
+<status status="PASS" starttime="20230209 19:06:26.272" endtime="20230209 19:06:29.648"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:06:31.649" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:06:29.648" endtime="20230209 19:06:31.649"/>
+</kw>
+<status status="PASS" starttime="20230209 19:06:23.950" endtime="20230209 19:06:31.649"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:31.649" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]'.</msg>
+<status status="PASS" starttime="20230209 19:06:31.649" endtime="20230209 19:06:33.226"/>
+</kw>
+<kw name="Finalize Test Case" library="Keywords" type="TEARDOWN">
+<doc>This will includ a wait time of 2 seconds and the [Teardown] close browser keyword</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:06:37.228" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230209 19:06:33.228" endtime="20230209 19:06:37.228"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230209 19:06:37.228" endtime="20230209 19:06:39.202"/>
+</kw>
+<status status="PASS" starttime="20230209 19:06:33.227" endtime="20230209 19:06:39.202"/>
+</kw>
+<doc>After adding an exception, 'Enable Exception' button should be displayed instead of 'Enable'</doc>
+<tag>3791</tag>
+<tag>acceptance</tag>
+<tag>alarms</tag>
+<tag>exception</tag>
+<tag>manager</tag>
+<tag>regression</tag>
+<status status="PASS" starttime="20230209 19:06:03.606" endtime="20230209 19:06:39.202"/>
+</test>
+<test id="s1-t4" name="Disable &amp; Enable Alarm through the panel button" line="53">
+<kw name="Open Browser To ACCEPTANCE Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ACCEPTANCE LOGIN URL}</arg>
+<arg>${BROWSER2}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230209 19:06:39.205" level="INFO">Opening browser 'headlessfirefox' to base url 'https://admin.3esynaptiq.com/sq2020/sign-in'.</msg>
+<msg timestamp="20230209 19:06:39.205" level="INFO">Firefox driver log is always forced to to: /Users/runtime/PycharmProjects/3E_Acceptance/Results/FirefoxResults/geckodriver-4.log</msg>
+<status status="PASS" starttime="20230209 19:06:39.204" endtime="20230209 19:06:49.641"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230209 19:06:49.641" endtime="20230209 19:06:50.147"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230209 19:06:50.147" endtime="20230209 19:06:50.148"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230209 19:06:50.148" endtime="20230209 19:06:50.654"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:06:52.655" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:06:50.655" endtime="20230209 19:06:52.655"/>
+</kw>
+<status status="PASS" starttime="20230209 19:06:39.204" endtime="20230209 19:06:52.656"/>
+</kw>
+<kw name="Login Acceptance" library="Keywords">
+<doc>This keyword will perfom the steps for a valid login in ACCEPTANCE</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${ACCEPTANCE USERNAME 1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:52.657" level="INFO">Typing text 'runtimerev' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230209 19:06:52.656" endtime="20230209 19:06:54.226"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${ACCEPTANCE PASSWORD 1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:54.227" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230209 19:06:55.240" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230209 19:06:55.780" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230209 19:06:54.227" endtime="20230209 19:06:55.780"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:55.780" level="INFO">Clicking element 'class=button'.</msg>
+<status status="PASS" starttime="20230209 19:06:55.780" endtime="20230209 19:06:57.024"/>
+</kw>
+<status status="PASS" starttime="20230209 19:06:52.656" endtime="20230209 19:06:57.024"/>
+</kw>
+<kw name="Access Alarms Manager" library="Keywords">
+<doc>This keyword will include the steps to access the alarms manager</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230209 19:06:57.025" endtime="20230209 19:06:58.705"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:06:58.705" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]/div'.</msg>
+<status status="PASS" starttime="20230209 19:06:58.705" endtime="20230209 19:07:00.594"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:07:02.596" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:07:00.595" endtime="20230209 19:07:02.596"/>
+</kw>
+<status status="PASS" starttime="20230209 19:06:57.024" endtime="20230209 19:07:02.596"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:02.596" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]'.</msg>
+<status status="PASS" starttime="20230209 19:07:02.596" endtime="20230209 19:07:04.147"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:07:06.148" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:07:04.147" endtime="20230209 19:07:06.148"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[contains(text(),'Inverter deviation')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:06.149" level="INFO">Clicking element '//*[contains(text(),'Inverter deviation')]'.</msg>
+<status status="PASS" starttime="20230209 19:07:06.149" endtime="20230209 19:07:07.404"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main-app"]/div[2]/div[2]/div[3]/table/tbody/tr[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:07.405" level="INFO">Clicking element '//*[@id="main-app"]/div[2]/div[2]/div[3]/table/tbody/tr[1]'.</msg>
+<msg timestamp="20230209 19:07:12.784" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230209 19:07:12.785" level="FAIL">ElementNotInteractableException: Message: Element &lt;tr class=" 'row-w-children' "&gt; could not be scrolled into view
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:186:5
+ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.jsm:296:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:156:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.js:125:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:203:24
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:91:31
+</msg>
+<status status="FAIL" starttime="20230209 19:07:07.404" endtime="20230209 19:07:12.790"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main-app"]/div[2]/div[2]/div[4]/div[1]/div[2]/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230209 19:07:12.790" endtime="20230209 19:07:12.790"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230209 19:07:12.790" endtime="20230209 19:07:12.790"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main-app"]/div[2]/div[2]/div[4]/div[1]/div[2]/div[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230209 19:07:12.791" endtime="20230209 19:07:12.791"/>
+</kw>
+<kw name="Finalize Test Case" library="Keywords" type="TEARDOWN">
+<doc>This will includ a wait time of 2 seconds and the [Teardown] close browser keyword</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:07:16.805" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230209 19:07:12.792" endtime="20230209 19:07:16.805"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230209 19:07:16.805" endtime="20230209 19:07:18.123"/>
+</kw>
+<status status="PASS" starttime="20230209 19:07:12.792" endtime="20230209 19:07:18.123"/>
+</kw>
+<doc>Through the Alarms Management panel, user can enable and disable an alarm</doc>
+<tag>3714</tag>
+<tag>acceptance</tag>
+<tag>alarms</tag>
+<tag>disable</tag>
+<tag>enale</tag>
+<tag>manager</tag>
+<tag>regression</tag>
+<tag>sprint59</tag>
+<status status="FAIL" starttime="20230209 19:06:39.202" endtime="20230209 19:07:18.124">ElementNotInteractableException: Message: Element &lt;tr class=" 'row-w-children' "&gt; could not be scrolled into view
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:186:5
+ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.jsm:296:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:156:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.js:125:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:203:24
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:91:31
+</status>
+</test>
+<test id="s1-t5" name="Alarms Management - Search for Inverter" line="74">
+<kw name="Open Browser To ACCEPTANCE Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ACCEPTANCE LOGIN URL}</arg>
+<arg>${BROWSER2}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230209 19:07:18.126" level="INFO">Opening browser 'headlessfirefox' to base url 'https://admin.3esynaptiq.com/sq2020/sign-in'.</msg>
+<msg timestamp="20230209 19:07:18.127" level="INFO">Firefox driver log is always forced to to: /Users/runtime/PycharmProjects/3E_Acceptance/Results/FirefoxResults/geckodriver-5.log</msg>
+<status status="PASS" starttime="20230209 19:07:18.126" endtime="20230209 19:07:23.039"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230209 19:07:23.039" endtime="20230209 19:07:23.542"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230209 19:07:23.543" endtime="20230209 19:07:23.543"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230209 19:07:23.544" endtime="20230209 19:07:24.048"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:07:26.049" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:07:24.048" endtime="20230209 19:07:26.049"/>
+</kw>
+<status status="PASS" starttime="20230209 19:07:18.125" endtime="20230209 19:07:26.049"/>
+</kw>
+<kw name="Login Acceptance" library="Keywords">
+<doc>This keyword will perfom the steps for a valid login in ACCEPTANCE</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${ACCEPTANCE USERNAME 1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:26.051" level="INFO">Typing text 'runtimerev' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230209 19:07:26.050" endtime="20230209 19:07:27.626"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${ACCEPTANCE PASSWORD 1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:27.627" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230209 19:07:28.651" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230209 19:07:29.213" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230209 19:07:27.626" endtime="20230209 19:07:29.213"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:29.214" level="INFO">Clicking element 'class=button'.</msg>
+<status status="PASS" starttime="20230209 19:07:29.214" endtime="20230209 19:07:30.459"/>
+</kw>
+<status status="PASS" starttime="20230209 19:07:26.050" endtime="20230209 19:07:30.460"/>
+</kw>
+<kw name="Access Alarms Manager" library="Keywords">
+<doc>This keyword will include the steps to access the alarms manager</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230209 19:07:30.460" endtime="20230209 19:07:31.492"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:31.492" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]/div'.</msg>
+<status status="PASS" starttime="20230209 19:07:31.492" endtime="20230209 19:07:33.234"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:07:35.237" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:07:33.234" endtime="20230209 19:07:35.238"/>
+</kw>
+<status status="PASS" starttime="20230209 19:07:30.460" endtime="20230209 19:07:35.238"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:35.238" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]'.</msg>
+<status status="PASS" starttime="20230209 19:07:35.238" endtime="20230209 19:07:36.555"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@id='mui-component-select-level']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:36.556" level="INFO">Clicking element '//div[@id='mui-component-select-level']'.</msg>
+<status status="PASS" starttime="20230209 19:07:36.555" endtime="20230209 19:07:38.296"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-level"]/div[3]/ul/li[11]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:38.297" level="INFO">Clicking element '//*[@id="menu-level"]/div[3]/ul/li[11]'.</msg>
+<status status="PASS" starttime="20230209 19:07:38.297" endtime="20230209 19:07:39.605"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@id='mui-component-select-logical_device']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:39.606" level="INFO">Clicking element '//div[@id='mui-component-select-logical_device']'.</msg>
+<status status="PASS" starttime="20230209 19:07:39.605" endtime="20230209 19:07:41.327"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="menu-logical_device"]/div[3]/ul/li[1]/div/div[1]/input</arg>
+<arg>Fabriano</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:41.328" level="INFO">Typing text 'Fabriano' into text field '//*[@id="menu-logical_device"]/div[3]/ul/li[1]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230209 19:07:41.327" endtime="20230209 19:07:42.906"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="menu-logical_device"]/div[3]/ul/li[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:42.908" level="INFO">Clicking element '//*[@id="menu-logical_device"]/div[3]/ul/li[4]'.</msg>
+<status status="PASS" starttime="20230209 19:07:42.907" endtime="20230209 19:07:45.043"/>
+</kw>
+<kw name="Finalize Test Case" library="Keywords" type="TEARDOWN">
+<doc>This will includ a wait time of 2 seconds and the [Teardown] close browser keyword</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:07:49.044" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230209 19:07:45.044" endtime="20230209 19:07:49.044"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230209 19:07:49.044" endtime="20230209 19:07:50.301"/>
+</kw>
+<status status="PASS" starttime="20230209 19:07:45.043" endtime="20230209 19:07:50.301"/>
+</kw>
+<doc>Test case created to verify the search of an inverter in alarms management</doc>
+<tag>3723</tag>
+<tag>acceptance</tag>
+<tag>alarms</tag>
+<tag>filters</tag>
+<tag>manager</tag>
+<tag>regression</tag>
+<tag>search</tag>
+<tag>sprint60</tag>
+<status status="PASS" starttime="20230209 19:07:18.125" endtime="20230209 19:07:50.301"/>
+</test>
+<test id="s1-t6" name="Alarms Management - Check if button is the opposite from the present stat of an alarm exception" line="91">
+<kw name="Open Browser To ACCEPTANCE Login Page" library="Keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ACCEPTANCE LOGIN URL}</arg>
+<arg>${BROWSER2}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230209 19:07:50.303" level="INFO">Opening browser 'headlessfirefox' to base url 'https://admin.3esynaptiq.com/sq2020/sign-in'.</msg>
+<msg timestamp="20230209 19:07:50.304" level="INFO">Firefox driver log is always forced to to: /Users/runtime/PycharmProjects/3E_Acceptance/Results/FirefoxResults/geckodriver-6.log</msg>
+<status status="PASS" starttime="20230209 19:07:50.303" endtime="20230209 19:07:55.477"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230209 19:07:55.477" endtime="20230209 19:07:55.984"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230209 19:07:55.985" endtime="20230209 19:07:55.986"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230209 19:07:55.986" endtime="20230209 19:07:56.495"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:07:58.496" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:07:56.495" endtime="20230209 19:07:58.496"/>
+</kw>
+<status status="PASS" starttime="20230209 19:07:50.303" endtime="20230209 19:07:58.497"/>
+</kw>
+<kw name="Login Acceptance" library="Keywords">
+<doc>This keyword will perfom the steps for a valid login in ACCEPTANCE</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${ACCEPTANCE USERNAME 1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:07:58.502" level="INFO">Typing text 'runtimerev' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230209 19:07:58.498" endtime="20230209 19:08:00.075"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${ACCEPTANCE PASSWORD 1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 19:08:00.075" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230209 19:08:01.093" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230209 19:08:01.623" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230209 19:08:00.075" endtime="20230209 19:08:01.623"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:08:01.623" level="INFO">Clicking element 'class=button'.</msg>
+<status status="PASS" starttime="20230209 19:08:01.623" endtime="20230209 19:08:02.867"/>
+</kw>
+<status status="PASS" starttime="20230209 19:07:58.497" endtime="20230209 19:08:02.871"/>
+</kw>
+<kw name="Access Alarms Manager" library="Keywords">
+<doc>This keyword will include the steps to access the alarms manager</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230209 19:08:02.874" endtime="20230209 19:08:04.022"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:08:04.023" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]/div'.</msg>
+<status status="PASS" starttime="20230209 19:08:04.022" endtime="20230209 19:08:05.629"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:08:07.630" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230209 19:08:05.630" endtime="20230209 19:08:07.631"/>
+</kw>
+<status status="PASS" starttime="20230209 19:08:02.871" endtime="20230209 19:08:07.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div[2]/div[1]/a[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:08:07.632" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/a[4]'.</msg>
+<status status="PASS" starttime="20230209 19:08:07.631" endtime="20230209 19:08:08.945"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//*[@id="main-app"]/div[2]/div[2]/div[1]/div[1]/div/div[1]/input</arg>
+<arg>Inverter Error Code</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230209 19:08:08.947" level="INFO">Sending key(s) ('Inverter Error Code', 'ENTER') to //*[@id="main-app"]/div[2]/div[2]/div[1]/div[1]/div/div[1]/input element.</msg>
+<msg timestamp="20230209 19:08:10.224" level="INFO">Sending keys Inverter Error Code</msg>
+<msg timestamp="20230209 19:08:10.800" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20230209 19:08:10.800" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230209 19:08:08.946" endtime="20230209 19:08:11.316"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main-app"]/div[2]/div[2]/div[3]/table/tbody/tr[2]/td[1]/div/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:08:11.316" level="INFO">Clicking element '//*[@id="main-app"]/div[2]/div[2]/div[3]/table/tbody/tr[2]/td[1]/div/span[2]'.</msg>
+<status status="PASS" starttime="20230209 19:08:11.316" endtime="20230209 19:08:17.363"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main-app"]/div[2]/div[2]/div[3]/table/tbody/tr[8]/td[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 19:08:17.365" level="INFO">Clicking element '//*[@id="main-app"]/div[2]/div[2]/div[3]/table/tbody/tr[8]/td[1]/div'.</msg>
+<status status="PASS" starttime="20230209 19:08:17.364" endtime="20230209 19:08:19.998"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>//*[@id="main-app"]/div[2]/div[2]/div[4]/div[1]/div[2]/div[2]/button</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20230209 19:08:22.536" level="INFO">Current page contains button '//*[@id="main-app"]/div[2]/div[2]/div[4]/div[1]/div[2]/div[2]/button'.</msg>
+<status status="PASS" starttime="20230209 19:08:19.998" endtime="20230209 19:08:22.536"/>
+</kw>
+<kw name="Finalize Test Case" library="Keywords" type="TEARDOWN">
+<doc>This will includ a wait time of 2 seconds and the [Teardown] close browser keyword</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230209 19:08:26.539" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230209 19:08:22.537" endtime="20230209 19:08:26.539"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230209 19:08:26.540" endtime="20230209 19:08:27.649"/>
+</kw>
+<status status="PASS" starttime="20230209 19:08:22.537" endtime="20230209 19:08:27.649"/>
+</kw>
+<doc>The button after clicking an alarm exception should enable or disable depending on present state</doc>
+<tag>3720</tag>
+<tag>acceptance</tag>
+<tag>alarms</tag>
+<tag>manager</tag>
+<tag>regression</tag>
+<tag>sprint60</tag>
+<status status="PASS" starttime="20230209 19:07:50.302" endtime="20230209 19:08:27.649"/>
+</test>
+<doc>Acceptance | Alarms Regression</doc>
+<status status="FAIL" starttime="20230209 19:04:56.184" endtime="20230209 19:08:27.651"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">3714</stat>
+<stat pass="1" fail="0" skip="0">3715</stat>
+<stat pass="1" fail="0" skip="0">3720</stat>
+<stat pass="1" fail="0" skip="0">3723</stat>
+<stat pass="1" fail="0" skip="0">3791</stat>
+<stat pass="5" fail="1" skip="0">acceptance</stat>
+<stat pass="5" fail="1" skip="0">alarms</stat>
+<stat pass="1" fail="0" skip="0">demonstration</stat>
+<stat pass="0" fail="1" skip="0">disable</stat>
+<stat pass="0" fail="1" skip="0">enale</stat>
+<stat pass="1" fail="0" skip="0">exception</stat>
+<stat pass="1" fail="0" skip="0">filters</stat>
+<stat pass="5" fail="1" skip="0">manager</stat>
+<stat pass="5" fail="1" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">search</stat>
+<stat pass="0" fail="1" skip="0">sprint59</stat>
+<stat pass="3" fail="0" skip="0">sprint60</stat>
+</tag>
+<suite>
+<stat pass="5" fail="1" skip="0" id="s1" name="Alarms">Alarms</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
